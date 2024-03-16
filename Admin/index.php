@@ -41,7 +41,7 @@
                 <label><input type="checkbox">Remember me</label>
                 <a href="#">Forget password?</a>
             </div>
-            <button class="btn" type="submit" name="submit">Login</button>
+            <button class="btn" type="submit" name="submit"  value="Login">Login</button>
             <div class="register-link">
                 <p>Don't have an account? <a href="Registration.php">Register</a></p>
             </div>
@@ -58,7 +58,12 @@
         if($sql->num_rows>0) {
             session_start();
             $_SESSION['Admin_user_name']= $Admin_User_name;
-            echo '<script type="text/javascript">alert("Logged in successfully");</script>';
+            ?>
+            <script type="text/javascript">
+            alert("Logged in successfully");
+            
+            </script>
+            <?php
             header("location:Admincpanel.php");
         } else {
             echo '<script type="text/javascript">alert("The username and password not found. Please try again.");</script>';
