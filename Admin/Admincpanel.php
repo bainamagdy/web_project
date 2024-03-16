@@ -28,8 +28,8 @@ header("location:index.php");
           <h3>
           <ul class="list">
             <li><a href="AddData.php" >Add food</a></li>
-            <li><a href="ViewData.php">Update Or Delete food</a></li>
-            <li><a href="Viewfood.php">Update food price</a></li>
+            <li><a href="DeleteData.php"> Delete food</a></li>
+            <li><a href="modify.php">Update food price</a></li>
           </ul>
           </h3>
      </article>
