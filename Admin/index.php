@@ -43,7 +43,7 @@
             </div>
             <button class="btn" type="submit" name="submit">Login</button>
             <div class="register-link">
-                <p>Don't have an account? <a href="Registration.html">Register</a></p>
+                <p>Don't have an account? <a href="Registration.php">Register</a></p>
             </div>
         </form>
     </div>
@@ -57,7 +57,7 @@
         $sql=mysqli_query($con,$q1);
         if($sql->num_rows>0) {
             session_start();
-            $_SESSION['Admin_User_name']= $Admin_User_name;
+            $_SESSION['Admin_user_name']= $Admin_User_name;
             echo '<script type="text/javascript">alert("Logged in successfully");</script>';
             header("location:Admincpanel.php");
         } else {
