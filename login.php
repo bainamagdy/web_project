@@ -20,7 +20,7 @@
                     <li><a href="#index.html">About US</a></li>
                     <li><a href="menu.html" target="_blank">Menu</a></li>
                     <li><a href="login.html">Login</a></li>
-                    <li><a href="Registration.html">Registration</a></li>
+                    <li><a href="Registration.php">Registration</a></li>
                     <li><a href="#index.html">Contact</a></li>
                 </ul>
             </nav>
@@ -30,11 +30,11 @@
         <form action="" method="post">
             <h1>Login</h1>
             <div class="input-box">
-                <input type="text" placeholder="Username" required>
+                <input type="text" name="Customer_user_name" placeholder="Username" required> <!-- Added name attribute -->
                 <i class='bx bxs-user'></i>
             </div>
             <div class="input-box">
-                <input type="password" placeholder="Password" required>
+                <input type="password" name="Customer_password" placeholder="Password" required> <!-- Added name attribute -->
                 <i class='bx bxs-lock-alt'></i>
             </div>
             <div class="remember-forget">
@@ -42,8 +42,8 @@
 
                 <a href="#">Forget password?</a>
             </div>
-            <button class="btn" >
-                <a href="index.html">Login</a> 
+            <button class="btn" name="submit" value="Login" type="submit"> <!-- Added name attribute and submit value -->
+                Login 
             </button>
             <div class="register-link">
                 <p>Don't have an account? <a href="Registration.html">Register</a></p>
@@ -51,9 +51,10 @@
         </form>
 
     </div>
-    </body>
+</body>
 
 </html>
+
 
 
     <?php 	
@@ -71,7 +72,7 @@
     #$query="SELECT * FROM `Customer` WHERE `Customer_user_name`='$Customer_user_name' and `Customer_password`='$Customer_Password'; 
     
     
-    $q1="SELECT * FROM `Customer` WHERE `Customer_user_name`='$Customer_user_name' and `Customer_password`='$Customer_Password'";
+    $q1="SELECT * FROM `Customer` WHERE `Customer_user_name`='$Customer_user_name' and `Customer_password`='$Customer_password'";
     $sql=mysqli_query($con,$q1);
     if($sql->num_rows>0)
     {

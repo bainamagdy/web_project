@@ -1,9 +1,9 @@
 <?php
 
-$host="mysql:host=localhost;dbname=besto_resturant";
+$host="localhost";
 $user="root";
 $pass="";
-$db="besto_resturant";
+$db="besto_restaurant";
 
 $con=mysqli_connect($host,$user,$pass,$db);
 $con->set_charset("utf8")

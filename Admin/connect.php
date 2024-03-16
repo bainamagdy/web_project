@@ -1,6 +1,6 @@
 <?php
 
-$host="mysql:host=localhost;dbname=besto_restaurant";
+$host="localhost";
 $user="root";
 $pass="";
 $db="besto_restaurant";

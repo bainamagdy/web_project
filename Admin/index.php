@@ -30,7 +30,7 @@
         <form action="" method="post">
             <h1>Login</h1>
             <div class="input-box">
-                <input type="text" name="Admin_user_name" placeholder="Username" required>
+                <input type="text" name="Admin_User_name" placeholder="Username" required>
                 <i class='bx bxs-user'></i>
             </div>
             <div class="input-box">
@@ -51,13 +51,13 @@
     <?php
     if(isset($_POST['submit']) and $_POST['submit'] == 'Login') {
         include 'connect.php';
-        $Admin_user_name=$_POST['Admin_user_name'];
+        $Admin_User_name=$_POST['Admin_User_name'];
         $Admin_password=$_POST['Admin_password'];
-        $q1="SELECT * FROM `admin` WHERE `Admin_user_name`='$Admin_user_name' and `Admin_password`='$Admin_password'";
+        $q1="SELECT * FROM `admin` WHERE `Admin_User_name`='$Admin_User_name' and `Admin_password`='$Admin_password'";
         $sql=mysqli_query($con,$q1);
         if($sql->num_rows>0) {
             session_start();
-            $_SESSION['Admin_user_name']= $Admin_user_name;
+            $_SESSION['Admin_User_name']= $Admin_User_name;
             echo '<script type="text/javascript">alert("Logged in successfully");</script>';
             header("location:Admincpanel.php");
         } else {
