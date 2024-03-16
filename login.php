@@ -27,7 +27,7 @@
         </div>
     </header>
     <div class="wrapper">
-        <form action="">
+        <form action="" method="post">
             <h1>Login</h1>
             <div class="input-box">
                 <input type="text" placeholder="Username" required>
@@ -51,9 +51,54 @@
         </form>
 
     </div>
-
-
-
-</body>
+    </body>
 
 </html>
+
+
+    <?php 	
+	
+    if(isset($_POST['submit']) and $_POST['submit'] == 'Login')	
+    {
+    
+    include 'connect.php';
+    
+    $Customer_user_name=$_POST['Customer_user_name'];
+    $Customer_password=$_POST['Customer_password'];
+    
+    
+    
+    #$query="SELECT * FROM `Customer` WHERE `Customer_user_name`='$Customer_user_name' and `Customer_password`='$Customer_Password'; 
+    
+    
+    $q1="SELECT * FROM `Customer` WHERE `Customer_user_name`='$Customer_user_name' and `Customer_password`='$Customer_Password'";
+    $sql=mysqli_query($con,$q1);
+    if($sql->num_rows>0)
+    {
+    session_start();	
+    $_SESSION['username']= $Customer_user_name;
+    
+    ?>
+    <script type="text/javascript">
+    alert("Logged in successfully");
+    
+    </script>
+    <?php	
+    
+    }
+    else
+    {
+    ?>
+    
+    <script type="text/javascript">
+    alert("the username and password not found try agin");
+    
+    </script>
+    
+    <?php
+    }
+    }
+    ?>
+
+
+
