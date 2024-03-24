@@ -78,10 +78,22 @@
     {
     session_start();	
     $_SESSION['username']= $Customer_user_name;
+    $row = $sql->fetch_assoc();
+    // Assign the email from the database to the session variable
+    $_SESSION['email'] = $row['Customer_Email'];
+    $_SESSION['address'] = $row['Customer_Address'];
+    $_SESSION['phone'] = $row['Customer_phone'];
+    $_SESSION['name'] = $row['Customer_Name'];
+    $_SESSION['id'] = $row['Customer_ID'];
+   
+    
+   
+    
     
     ?>
     <script type="text/javascript">
     alert("Logged in successfully");
+    window.location.href = "menu.php";
     
     </script>
     <?php	
@@ -93,6 +105,7 @@
     
     <script type="text/javascript">
     alert("the username and password not found try agin");
+    header("location:menu.php");
     
     </script>
     

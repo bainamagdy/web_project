@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en">
 
@@ -6,30 +5,63 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Modify Item</title>
+    <link rel="stylesheet" href="Update.css">
 </head>
 
 <body>
-    <div class="content-reg">
-        <div class="Add">
-            <form method="post" enctype="multipart/form-data">
-                <input type="hidden" name="Item_ID" >
-                <div class="icon"><i class="fa-solid fa-circle-plus"></i></div>
+    <header id="home">
+        <div id="navbar">
+        <img src="./img/logo.png" alt="BESTO Resturant Logo" style="width: 125px; padding-top:20px ;">
+        <nav role="navigation">
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="menu.html" target="_blank">Menu</a></li>
+                <li><a href="login.html">Login</a></li>
+                <li><a href="Registration.html">Registration</a></li>
+                
+            </ul>
+        </nav>
+        </div>
+       
+    </header>
+    <div class="content">
+        <div class="ADD">
+            <form action="" method="post">
                 <h2>Modify Item</h2><br>
-                <p>Item Name</p>
-                <input type="text" name="Item_Name" placeholder="Enter Item Name" >
-                <p>Item Price</p>
-                <input type="text" name="Item_Price" placeholder="Enter Item Price" >
-                <p>Item Description</p>
-                <input type="text" name="Item_Description" placeholder="Enter Item Description" >
-                <p>Current Picture:</p>
-                <img src="uploads/" alt="Current Picture" style="max-width: 100px;"><br>
-                <p>Upload New Picture</p>
-                <input type="file" name="upload">
+                <p class="mo">Item Name</p>
+                <div class="inputbox">
+                    <input type="text" name="Item_Name" placeholder="Enter Item Name" required>
+                </div>
+
+                <p class="mo">Item Price</p>
+                <div class="inputbox">
+                    <input type="text" name="Item_Price" placeholder="Enter Item Price" required>
+                </div>
+
+                <p class="mo">Item Description</p>
+                <div class="inputbox">
+                    <input type="text" name="Item_Description" placeholder="Enter Item Description" required>
+                </div>
+
+                <p class="mo">Current Picture:</p>
+                <div class="aa">
+                    <img src="uploads/" alt="Current Picture" style="max-width: 100px;">
+                </div>
+                
+                <p class="mo">Upload New Picture</p>
+                <div class="inputboxx">
+                    <input type="file" name="upload">
+                </div>
+               <div class="sub">
                 <input type="submit" name="submit" value="Modify">
+               </div>
+                
             </form>
         </div>
     </div>
 </body>
+
+</html>
 
 </html>
 
@@ -57,7 +89,7 @@ if(isset($_POST['submit'])) {
     }
 
     // Update data in menu_item table
-    $query = "UPDATE menu_item SET Item_Name = '$Item_Name', Item_Price = '$Item_Price', Item_Descreption = '$Item_Description' $update_picture WHERE Item_ID = '$Item_ID'";
+    $query = "UPDATE menu_item SET Item_Name = '$Item_Name', Item_Price = '$Item_Price', Item_Description = '$Item_Description' $update_picture WHERE Item_ID = '$Item_ID'";
     
     if (mysqli_query($con, $query)) {
         echo "Data modified successfully!";
@@ -66,27 +98,6 @@ if(isset($_POST['submit'])) {
     }
 }
 
-// Check if item_id is set in the URL
-if(isset($_GET['item_id'])) {
-    $item_id = $_GET['item_id'];
-
-    // Fetch item data from the database
-    $query = "SELECT * FROM menu_item WHERE Item_ID = '$item_id'";
-    $result = mysqli_query($con, $query);
-    if(mysqli_num_rows($result) > 0) {
-        $row = mysqli_fetch_assoc($result);
-
-        // Assign fetched data to variables
-        $_POST['Item_ID'] = $row['Item_ID'];
-        $_POST['Item_Name'] = $row['Item_Name'];
-        $_POST['Item_Price'] = $row['Item_Price'];
-        $_POST['Item_Description'] = $row['Item_Descreption'];
-        $_POST['Item_picture'] = $row['Item_picture'];
-    } else {
-        // Handle case where item is not found
-        echo "Item not found!";
-    }
-}
-
 mysqli_close($con); // Close database connection
 ?>
+

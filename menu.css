@@ -1,0 +1,154 @@
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&display=swap');
+
+#navbar {
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 80px;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+}
+
+#navbar img {
+    width: 80px;
+    margin-left: 100px;
+}
+
+/*.cart {
+    display: flex;
+    color: white;
+    align-items: center;
+    padding: 5px 0px;
+    margin-right: 20px;
+    width: 100px;
+}*/
+
+nav ul {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    list-style: none;
+    padding-right: 110px;
+}
+
+nav ul li a {
+    padding: 15px 20px;
+    font-weight: 900;
+    color: white;
+    text-decoration: none;
+}
+
+nav ul li a:hover {
+    border-bottom: 2px solid orange;
+}
+
+#count {
+    margin-left: 10px;
+    width: 30px;
+    background: orange;
+    border-radius: 50%;
+    text-align: center;
+    line-height: 27px;
+}
+
+/* Menu Section Start */
+#menu {
+    background: url("./img/offer-background.jpg") center center no-repeat fixed;
+    background-size: 100% auto;
+    padding: 5rem 0;
+}
+/* Menu Section Start */
+
+
+#menu .title {
+    text-align: center;
+    margin-bottom: 2rem;
+ }
+
+#menu .title h2 {
+    margin-top: 2rem;
+    color: orange;
+    font-size:40px;
+}
+#menu .menu-items {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#menu .menu-items .menu-item {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 40px;
+}
+
+#menu .menu-items .menu-item img {
+    width: 80px;
+    margin-right: 20px;
+    border-radius: 50%;  /*عشان اظبط حجم الصورة واخليها مدورة */
+}
+
+#menu .menu-items .menu-item h3 {
+    color: #383848;
+    border-bottom: 1px dashed #c2bdbd;
+    padding-bottom: 10px;
+    position: relative;
+}
+
+#menu .menu-items .menu-item span {
+    position: absolute;
+    right: 85%;
+    top: 85px;
+    color: orange;
+}
+#menu .menu-item {
+    position: relative;
+    margin-bottom: 20px;
+}
+
+#menu .menu-item .add-to-cart {
+    position: absolute;
+    top: 100px;
+    right: 0;
+    color: orange;
+    cursor: pointer;
+    background-color: white;
+    border: 2px solid orange;
+    border-radius: 15px;
+    padding: 5px 10px;
+}
+
+#menu .menu-item:hover .add-to-cart {
+    background-color: orange;
+    color: white;
+}
+#menu .menu-items .menu-item p {
+    margin-top: 10px;
+    
+}
+#menu .btn {
+    display: block;
+    color: orange;
+    margin: 20px auto 0;
+    cursor: pointer;
+    background-color: white;
+    border: 2px solid orange;
+    border-radius: 15px;
+    padding: 10px 20px;
+    text-decoration: none;
+}
+
+#menu .btn a {
+    color: inherit;
+    text-decoration: none;
+}
+#menu .btn:hover{
+    background-color: orange;
+    color: #fff;
+}
+/* Menu Section End */

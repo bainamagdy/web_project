@@ -1,11 +1,45 @@
-<!-- HTML form to confirm item deletion -->
-<form method="post" >
-<p>Item Name</p>
-            <input type="text" name="Item_ID" placeholder="Enter Item ID">
-    <p>Are you sure you want to delete this item?</p>
-    <input type="submit" name="delete_item" value="Yes">
-    
-</form>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Delete Items</title>
+    <link rel="stylesheet" href="del.css">
+</head>
+<body>
+    <header id="home">
+        <div id="navbar">
+        <img src="./img/logo.png" alt="BESTO Resturant Logo" style="width: 125px; padding-top:20px ;">
+        <nav role="navigation">
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="menu.html" target="_blank">Menu</a></li>
+                <li><a href="login.html">Login</a></li>
+                <li><a href="Registration.html">Registration</a></li>
+                
+            </ul>
+        </nav>
+        </div>
+       
+    </header>
+    <div class="content">
+        <form action="" method="post">
+            <h2>Delete Item</h2>
+            <p class="del">Item Name</p>
+                 <div class="inputbox">
+                    <input type="text" name="Item_ID" placeholder="Enter Item ID" required>
+                 </div>
+           
+                 <p class="del">Are you sure you want to delete this item?</p>
+                 <div class="sub">
+                    <input type="submit" name="delete_item" value="Yes">
+                 </div>
+                
+                
+            </form>
+    </div>
+</body>
+</html>
 <?php
 if(isset($_POST['delete_item'])) {
     include 'connect.php'; // Include your database connection file

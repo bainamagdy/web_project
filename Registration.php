@@ -74,13 +74,13 @@ if(@$_POST['submit'] and $_POST['submit'] =='Register')
 {
     include("Connect.php");
     $Customer_Name=$_POST['Customer_name'];
-    $Customer_Username=$_POST['Customer_user_name'];
+    $Customer_User_name=$_POST['Customer_user_name'];
     $Customer_Password=$_POST['Customer_password'];
     $Customer_Email=$_POST['Customer_Email'];
     $Customer_Phone=$_POST['Customer_phone'];
     $Customer_Address=$_POST['Customer_Address'];
 
-    $query="SELECT * FROM `customer` WHERE `Customer_Email`='$Customer_Email'  or `Customer_user_name`='$Customer_user_name'";
+    $query="SELECT * FROM `customer` WHERE `Customer_Email`='$Customer_Email'  or `Customer_user_name`='$Customer_User_name'";
                 
     $sql=mysqli_query($con,$query);
     $row=mysqli_fetch_array($sql);
@@ -96,7 +96,7 @@ if(@$_POST['submit'] and $_POST['submit'] =='Register')
     else
     {  
         $sql1="INSERT INTO `customer` ( `Customer_name`, `Customer_phone`, `Customer_Email`, `Customer_user_name`, `Customer_password`,Customer_Address)
-               VALUES( '$Customer_Name', '$Customer_Phone', '$Customer_Email', '$Customer_user_name', '$Customer_Password','$Customer_Address');";
+               VALUES( '$Customer_Name', '$Customer_Phone', '$Customer_Email', '$Customer_User_name', '$Customer_Password','$Customer_Address');";
 
         mysqli_query($con,$sql1);
 

@@ -1,0 +1,59 @@
+/* CSS for Explore Orders page */
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f0f0f0;
+}
+
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+.item {
+    display: flex;
+    margin-bottom: 20px;
+    background-color: #fff;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.item img {
+    width: 100px;
+    margin-right: 20px;
+    border-radius: 5px 0 0 5px;
+}
+
+.item-details {
+    flex: 1;
+    padding: 20px;
+}
+
+.item-details h3 {
+    margin: 0 0 10px;
+    color: #333;
+}
+
+.item-details p {
+    margin: 0;
+    color: #666;
+}
+
+.total-price {
+    text-align: right;
+    margin-top: 20px;
+}
+
+.total-price span {
+    font-weight: bold;
+    color: #333;
+}

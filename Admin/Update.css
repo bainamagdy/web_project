@@ -1,0 +1,148 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif; 
+} 
+header {
+    height: 100vh;
+    background: url("./img/home.bg.png") center center/cover no-repeat;
+    position: relative;
+  }
+  
+  #navbar {
+    background-color: rgba(217, 212, 212, 0.8);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 75px;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+  }
+  
+  
+  #navbar img {
+    width: 80px;
+    margin-left: 100px;
+  }
+  
+  nav ul {
+    display: flex;
+    margin-right: 100px;
+    list-style: none;
+  }
+  
+  nav ul li a {
+    padding: 15px 20px;
+    font-weight: 600;
+    color: #e9880a;
+    text-decoration: none;
+    
+  }
+  
+  nav ul li a:hover {
+    border-bottom: 2px solid orange;
+  }
+body {
+       display: flex;
+        justify-content: center;
+        align-items: center;
+         height: 99vh;
+        background: url(img/adddata.jpg);
+        background-size:cover;
+       background-position: center;
+       
+     }
+     .content {
+               width: 400px;
+              background: transparent;
+              border-width: 2px;
+             border-style: solid;
+             border-color: rgba(30, 28, 28, 0.2);
+             backdrop-filter: blur(100%);
+             box-shadow: 0 0 10px rgba(0, 0, 0, -2);
+             color: #e9880a;
+              border-radius: 20px;
+              padding: 18px 25px;
+              margin-top: 70px;
+
+            }
+    .content  h2 {
+                       font-size: 26px;
+                          text-align: center;
+                }
+                .content .mo {
+        font-size: 18px;
+    } 
+    .content .ADD .inputbox {
+position: relative;
+width: 100%;
+height: 40px;
+margin: 13px 5px;
+} 
+.inputbox input {
+width: 100%;
+height: 100%;
+background: transparent;
+border: none;
+outline: none;
+border-width: 3px;
+border-style: solid;
+border-color: rgba(26, 58, 17, 0.2);
+border-radius: 40px;
+font-size: 16px;
+color:#1f1f1d;
+padding: 20px 45px 20px 20px 20px;
+padding-left: 15px;
+
+}
+.inputbox input::placeholder {
+color:#8c4a03;
+}
+
+.content .aa{
+width: 100%;
+height: 100%;
+font-size: 15px;
+ color: #8c4a03;
+padding: 20px 45px 20px 20px 20px ;
+padding-left: 15px;
+}
+.content .inputboxx {
+width: 77%;
+height: 100%;
+background: transparent;
+border: none;
+outline: none;
+font-size: 20px;
+color: #8c4a03;
+padding: 100px 45px 20px 20px 20px;
+padding-left: 10px;
+padding-bottom: 4px;
+margin-bottom: 15px;
+}
+.content .sub{
+height: 40px;
+margin: 20px 0;
+display: flex;
+justify-content: center;
+}
+.content .sub  input {
+height: 100%;
+width: 96%;
+outline: none;
+color: #fff;
+border: none;
+font-size: 22px;
+font-weight: 500;
+border-radius: 5px;
+letter-spacing: 1px;
+background:#e9880a;
+}
+.content .sub  input:hover{
+background: linear-gradient(135deg,#fb7609, #254146 );
+}
